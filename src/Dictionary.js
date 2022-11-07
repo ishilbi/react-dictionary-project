@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Dictionary.css";
 import Results from "./Results";
+import "./Dictionary.css";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
@@ -9,13 +9,7 @@ export default function Dictionary() {
 
   function handleResponse(response) {
     setResults(response.data[0]);
-    console.log(response.data);
-    console.log(response.data[0].meanings[0].definitions[0]);
-    console.log(response.data[0].meanings[0].definitions[1]);
-    console.log(response.data[0].meanings[0].synonyms[0]);
-    console.log(response.data[0].meanings[0].synonyms[1]);
-    console.log(response.data[0].meanings[0].synonyms[2]);
-    console.log(response.data[0].phonetics[0]);
+    console.log(response.data[0]);
   }
 
   function search(event) {
@@ -31,14 +25,19 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <form onSubmit={search}>
-        <input
-          type="search"
-          onChange={handleKeywordChange}
-          autoFocus={true}
-          placeholder="Type your word"
-        />
-      </form>
+      <section>
+        <h1>What word do you want to search?</h1>
+        <form onSubmit={search}>
+          <input
+            className="search-input"
+            type="search"
+            onChange={handleKeywordChange}
+          />
+        </form>
+        <div className="hint">
+          suggested words: sunset, wine, yoga, plant...
+        </div>
+      </section>
       <Results results={results} />
     </div>
   );
