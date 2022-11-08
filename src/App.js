@@ -13,7 +13,21 @@ function App() {
           <Dictionary />
         </main>
         <footer className="App-footer">
-          <small>Coded by Silvia Lee</small>
+          <small>
+            This project was coded by
+            <a href="mailto:silvialeelee7@gmail.com"> Silvia Lee</a> and is{" "}
+            <a
+              href="https://github.com/ishilbi/react-dictionary-project"
+              target="_blank"
+              rel="noreferrer"
+            >
+              open-sourced on GitHub
+            </a>{" "}
+            and hosted on{" "}
+            <a href="https://app.netlify.com/sites/lucky-cendol-1c5abe/overview">
+              Netlify
+            </a>
+          </small>
         </footer>
       </div>
     </div>
