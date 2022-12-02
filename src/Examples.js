@@ -1,15 +1,14 @@
 import React from "react";
 
 export default function Examples(props) {
-  if (props.example) {
+  if (props.examples) {
     return (
       <div className="Examples">
-        {props.examples.map(function (example, index) {
-          return <span key={index}>{example}</span>;
-        })}
+        <strong>Example: </strong>
+        <em>{props.examples}</em>
       </div>
     );
   } else {
-    return "We couldn't find any examples. ";
+    return null;
   }
 }
