@@ -11,7 +11,7 @@ export default function Results(props) {
           <h2>{props.results.word}</h2>
           {props.results.phonetics.map(function (phonetic, index) {
             return (
-              <div key={index} className="phonetic">
+              <div key={index}>
                 <Phonetic phonetic={phonetic} />
               </div>
             );
@@ -23,7 +23,7 @@ export default function Results(props) {
               <Meaning meaning={meaning} />
             </section>
           );
-        })}
+        })}{" "}
       </div>
     );
   } else {

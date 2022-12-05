@@ -1,7 +1,6 @@
 import logo from "./Color-logo-with-background.png";
 import "./App.css";
 import Dictionary from "./Dictionary";
-
 function App() {
   return (
     <div className="App">
@@ -10,7 +9,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <main>
-          <Dictionary defaultKeyword="" />
+          <Dictionary defaultKeyword="Welcome" />
         </main>
         <footer className="App-footer">
           <small>

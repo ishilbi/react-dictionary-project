@@ -1,5 +1,5 @@
 .Synonyms {
-  margin: 30px 0;
+  margin: 20px 0;
   padding: 0;
   text-align: left;
 }
@@ -8,6 +8,5 @@
   padding-right: 20px;
   font-size: 15px;
   line-height: 1px;
-  opacity: 0.6;
-  font-weight: bold;
+  opacity: 0.7;
 }
